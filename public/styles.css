@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top:2.5rem;
+  position:relative;
+}
+
+h1{
+  font-size:5rem;
+  margin-bottom: .6rem;
+}
+
+h2{
+  text-align: center;
+  font-size:3.5rem;
+}
+
+.gameContainer{
+  display: flex;
+  width: 68%;
+  height: 62%;
+  flex-flow: wrap;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+.flipCardContainer {
+  width: 19%;
+  perspective: 1000px;
+  margin-bottom: 1rem;
+}
+
+.flipCard {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.reveal, .stayFlipped{
+  transform: rotateY(180deg); /* <=>  rotateY(.5turn) */
+}
+/* .flipCardContainer:hover .flipCard {
+  transform: rotateY(180deg); /* <=>  rotateY(.5turn) */
+/* } */
+/* Position the front and back side */
+.flipCardFront, .flipCardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+}
+.flipCardFront {
+  background-color: #333;
+  color: #fff;
+}
+.flipCardBack {
+  background-color: #517fa4;
+  color: #fff;
+  transform: rotateY(180deg);
+}
+.flipCardFront img, .flipCardBack img{
+  width: 85%;
+  height: 100%;
+
+}
+
+.buttonContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+button{
+  border: none;
+  font-size: 3rem;
+  padding: 2rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+button:focus{
+  outline:none;
+}
+/* w3 schools */
+.container {
+  display: inline-block;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 12;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.bar1.change {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+  background-color: white;
+}
+
+.bar2.change {opacity: 0; background-color: :white;}
+
+.bar3.change {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+  background-color:white;}
+.change{
+
+}
+
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom:0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.hidden{
+  display: none;
+}
+.leaderboard{
+  background-color: white;
+  width: 30%;
+}
+.leaderboard li{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid gray;
+}
+.leaderboard li p{
+  font-size: 2rem;
+}
+.overlay>ul{
+  background-color: white;
+  width: 45%;
+}
+li{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid gray;
+  padding:1rem;
+}
+p{
+  font-size: 2.5rem;
+}
