@@ -9,7 +9,6 @@ document.querySelector('.container').addEventListener('click',()=>{
   document.querySelector('.bar3').classList.toggle('change')
   document.querySelector('.overlay').classList.toggle('hidden')
   // document.querySelector('').classList.toggle()
-
 })
 
 function getLeaderBoard(){
